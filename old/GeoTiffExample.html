@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+    <!--NOTE: Most Web WorldWind examples use jquery, Bootstrap and requirejs but those technologies are NOT-->
+    <!--required by Web WorldWind. See SimplestExample.html for an example of using Web WorldWind without them.-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="src/bootstrap.css">
+    <script src="src/jquery.js" type="text/javascript"></script>
+    <script src="src/bootstrap.js"></script>
+    <script src="src/spin.js"></script><style type="text/css"></style>
+    <script data-main="GeoTiffExample" src="src/require.js"></script>
+    <script src = "src/GeoTiffExample.js"></script>
+<script type="text/javascript" charset="utf-8" async="" data-requirecontext="_" data-requiremodule="src/worldwind.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="jumbotron hidden-xs">
+        <h1 style="text-align:center">WorldWind GeoTiff</h1>
+    </div>
+    <div class="row">
+        <div class="col-sm-3">
+            <h4>Projection</h4>
+            <div class="dropdown" id="projectionDropdown">
+            <button class="btn btn-info btn-block dropdown-toggle" type="button" data-toggle="dropdown">3D<span class="caret"></span></button>
+            <ul class="dropdown-menu"><li><a>3D</a></li><li><a>Equirectangular</a></li><li><a>Mercator</a></li><li><a>North Polar</a></li><li><a>South Polar</a></li><li><a>North UPS</a></li><li><a>South UPS</a></li><li><a>North Gnomonic</a></li><li><a>South Gnomonic</a></li></ul></div>
+            <br>
+            <h4>Layers</h4>
+            <div class="list-group" id="layerList">
+            <button class="list-group-item btn btn-block">Blue Marble</button>
+            <button class="list-group-item btn btn-block active">Bing Aerial with Labels</button>
+            <button class="list-group-item btn btn-block active">Atmosphere</button>
+            <button class="list-group-item btn btn-block active">Compass</button>
+            <button class="list-group-item btn btn-block active">Coordinates</button>
+            <button class="list-group-item btn btn-block active">View Controls</button>
+            <button class="list-group-item btn btn-block active">GeoTiff</button>
+        </div>
+            <br>
+            <h4>Destination</h4>
+            <div class="input-group" id="searchBox">
+                <input class="form-control" placeholder="GoTo" id="searchText" type="text">
+                <span class="input-group-btn">
+                    <button id="searchButton" class="btn btn-primary" type="button">
+                        <span class="glyphicon glyphicon-search"></span>
+                    </button>
+                </span>
+            </div>
+        </div>
+        <div class="col-sm-9" id="globe">
+            <canvas id="canvasOne" width="848" height="848" style="width: 100%; height: auto; background-color: black; touch-action: none;">
+                Your browser does not support HTML5 Canvas.
+            </canvas>
+        </div>
+    </div>
+</div>
+
+</body></html>
